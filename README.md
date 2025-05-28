@@ -49,6 +49,21 @@ Output image:
 └── ...
 ```
 
+
+## Output Matrix
+
+![confusion_matrix_normalized](https://github.com/user-attachments/assets/6b256d9d-8de1-4ba7-bc4a-464d67062be5)
+![labels](https://github.com/user-attachments/assets/8c630f00-33a1-48a7-8d70-6bf31d66107f)
+![results](https://github.com/user-attachments/assets/3b3aebe7-eaba-4262-85c6-c7a250dac059)
+![PR_curve](https://github.com/user-attachments/assets/e6f1837f-f00b-492b-bbaa-d37623bc9090)
+
+
+
+
+
+
+
+
 ## References
 
 - [YOLOv11 Paper/Repository](https://github.com/ultralytics/yolov11)  
