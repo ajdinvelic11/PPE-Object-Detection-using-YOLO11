@@ -10,7 +10,10 @@ This project provides an advanced Personal Protective Equipment (PPE) detection 
 - **Flexible Integration:** Allow users to train or fine-tune on custom datasets and integrate the model into varied workflows.
 - **Scalability:** Support for multiple input types (images, video files, live camera), making the solution adaptable to different environments.
 
-  
+Input image: ![00020_jpg rf abe4d0d5d5829754ec268692af2e7307](https://github.com/user-attachments/assets/cd082164-684a-4d9a-8033-8f20bf70b652)
+Output image: ![00020_jpg rf abe4d0d5d5829754ec268692af2e7307](https://github.com/user-attachments/assets/ca4fd7e2-d4ca-406a-8ea8-097a1fffa67b)
+
+ 
 ## Key Features
 
 - **YOLOv11 Model Integration:** Leverages the state-of-the-art YOLOv11 deep learning model for real-time object detection.
