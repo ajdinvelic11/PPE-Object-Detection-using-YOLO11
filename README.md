@@ -58,12 +58,6 @@ Output image:
 ![PR_curve](https://github.com/user-attachments/assets/e6f1837f-f00b-492b-bbaa-d37623bc9090)
 
 
-
-
-
-
-
-
 ## References
 
 - [YOLOv11 Paper/Repository](https://github.com/ultralytics/yolov11)  
