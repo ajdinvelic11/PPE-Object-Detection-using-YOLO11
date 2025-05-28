@@ -1,8 +1,16 @@
 
-# PPE Object Detection using YOLOv11
+# Personal Protective Equipment (PPE) Object Detection using YOLOv11
 
-This repository implements an advanced Personal Protective Equipment (PPE) detection system utilizing the YOLOv11 architecture. The aim is to automatically identify whether individuals in images or video streams are wearing required PPE such as helmets, vests, gloves, and masks, helping to enhance workplace safety in industrial, construction, and healthcare environments.
+This project provides an advanced Personal Protective Equipment (PPE) detection system using the YOLOv11 deep learning architecture. The objective is to automate the process of identifying whether individuals in images or video streams are wearing essential PPE items such as helmets, vests, gloves, and masks. The system is designed for real-time applications and can be deployed in industrial, construction, healthcare, or any environment where safety compliance is critical.
 
+## Objectives
+
+- **Automate PPE Monitoring:** Reduce manual supervision by automatically detecting PPE compliance in real-time.
+- **Enhance Workplace Safety:** Improve safety standards by providing instant alerts when PPE is missing.
+- **Flexible Integration:** Allow users to train or fine-tune on custom datasets and integrate the model into varied workflows.
+- **Scalability:** Support for multiple input types (images, video files, live camera), making the solution adaptable to different environments.
+
+  
 ## Key Features
 
 - **YOLOv11 Model Integration:** Leverages the state-of-the-art YOLOv11 deep learning model for real-time object detection.
@@ -19,7 +27,25 @@ This repository implements an advanced Personal Protective Equipment (PPE) detec
 - Ensuring mask/gear usage in healthcare facilities.
 - Real-time alerts for missing PPE in hazardous zones.
 
+## Project Structure
 
+```
+.
+├── data/                   # Training, validation, and test datasets
+├── models/                 # Pretrained or custom-trained YOLOv11 models
+├── utils/                  # Utility scripts for preprocessing, visualization, etc.
+├── detect.py               # Script for running detection on images/videos/streams
+├── train.py                # Script for training or fine-tuning YOLOv11 on custom dataset
+├── requirements.txt        # Python dependencies
+├── README.md               # Project documentation
+└── ...
+```
+
+## References
+
+- [YOLOv11 Paper/Repository](https://github.com/ultralytics/yolov11)  
+- [YOLO Format Annotation Guide](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data)
+- [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html) for pre-annotated PPE samples
 
 
 
