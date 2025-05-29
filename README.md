@@ -50,6 +50,87 @@ Output image:
 └── ...
 ```
 
+Here’s a detailed explanation of each cell from the notebook python_code.ipynb in the PPE-Object-Detection-using-YOLO11 repo:
+
+---
+
+### **Cell 1**
+```python
+!pip install tensorflow
+```
+**Purpose:**  
+Installs TensorFlow, a popular deep learning library. This is necessary for running or training deep learning models, though in this project, TensorFlow is not directly used (YOLO and Ultralytics use PyTorch as backend).
+
+
+### **Cell 2**
+```python
+pip install tensorflow-gpu
+```
+**Purpose:**  
+Installs the GPU version of TensorFlow to accelerate computations using your GPU (if available). Again, for YOLO and Ultralytics, PyTorch is more relevant.
+
+
+### **Cell 3 (optional)**
+```python
+pip install nvidia-cuda-runtime-cu12
+```
+**Purpose:**  
+Installs NVIDIA CUDA runtime version 12, which is a GPU acceleration library. Required for running deep learning models on NVIDIA GPUs.
+
+
+### **Cell 4**
+```python
+!pip install ultralytics
+from ultralytics import YOLO
+createdmodel=YOLO("yolo11n.pt")
+results= createdmodel.train(data="D:/YOLO-PPE-OBJECT DETECTION/dataset/data.yaml",epochs=8,imgsz=640)
+```
+**Purpose:**  
+1. **Install Ultralytics:** This package provides the YOLO (You Only Look Once) object detection framework.
+2. **Import YOLO:** Loads the YOLO class for model operations.
+3. **Load Model:** `createdmodel=YOLO("yolo11n.pt")` loads the YOLOv11n (nano) model weights.
+4. **Train Model:** Trains the model on your custom dataset (`data.yaml` describes classes and data paths) for 8 epochs, with image size 640.
+
+**Output:**  
+- Shows training progress, loss values, validation metrics, and final model saving.
+- Detection categories in this context likely include: Person, Gloves, Hard_hat, Mask, Safety_boots, Vest.
+
+
+### **Cell 5**
+```python
+#USING PRETRAINED MODEL
+model_test=YOLO("runs/detect/train2/weights/best.pt")
+results=model_test("test/images", save=True, imgsz=320, conf=0.7)
+results[0].show()
+```
+**Purpose:**  
+1. **Load Best Model:** Loads the best model weights from training.
+2. **Run Inference:** Runs detection on all images in `test/images` with an image size of 320x320, saving results, and using a confidence threshold of 0.7.
+3. **Show Results:** Displays the result for the first test image.
+
+**Output:**  
+- For each image, prints detections (e.g., “1 Person, 1 Vest”), inference time, and saves the visual result (annotated image).
+
+
+### **Cell 6** 
+```python
+#USING PRETRAINED MODEL
+model_test=YOLO("runs/detect/train2/weights/best.pt")
+results=model_test("test/images", save=True, imgsz=320, conf=0.7)
+results[0].show()
+```
+**Purpose:**  
+This cell is again a repeat of the previous two. It runs inference on the test set and visualizes the predictions.
+
+---
+
+#### **Summary**
+
+- **First 3 cells:** Install dependencies (some are not directly needed for YOLO/Ultralytics).
+- **Cell 4:** Installs and uses Ultralytics YOLO, loads model, and trains on your dataset.
+- **Cells 5-7:** Load the best model weights after training and run detection on test images, saving and displaying the results.
+
+
 
 ## Output Matrix
 
