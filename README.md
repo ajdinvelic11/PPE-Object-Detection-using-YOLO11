@@ -36,7 +36,7 @@ Output image:
 - Ensuring mask/gear usage in healthcare facilities.
 - Real-time alerts for missing PPE in hazardous zones.
 
-The `dataset` folder in the repository [vyasdeepti/PPE-Object-Detection-using-YOLO11](https://github.com/vyasdeepti/PPE-Object-Detection-using-YOLO11/tree/main/dataset) is structured for training a YOLOv11 model for PPE (Personal Protective Equipment) detection. Here is an explanation of the dataset's organization and content:
+The `dataset` folder in the repository is structured for training a YOLOv11 model for PPE (Personal Protective Equipment) detection. Here is an explanation of the dataset's organization and content:
 
 ### 1. Top-level Contents
 - **README.dataset.txt:**  
