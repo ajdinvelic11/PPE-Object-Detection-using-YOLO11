@@ -36,25 +36,79 @@ Output image:
 - Ensuring mask/gear usage in healthcare facilities.
 - Real-time alerts for missing PPE in hazardous zones.
 
-## Project Structure
+The `dataset` folder in the repository [vyasdeepti/PPE-Object-Detection-using-YOLO11](https://github.com/vyasdeepti/PPE-Object-Detection-using-YOLO11/tree/main/dataset) is structured for training a YOLOv11 model for PPE (Personal Protective Equipment) detection. Here is an explanation of the dataset's organization and content:
 
+### 1. Top-level Contents
+- **README.dataset.txt:**  
+  Contains basic info about the dataset, including the source (Roboflow), date, and license (CC BY 4.0).  
+  Example:  
+  ```
+  # PPE DETECTION > 2024-04-22 2:49am
+  https://universe.roboflow.com/sdp-lfigk/ppe-detection-ozhfb
+  
+  Provided by a Roboflow user
+  License: CC BY 4.0
+  ```
+
+- **README.roboflow.txt:**  
+  Provides detailed info about the dataset:
+  - Exported via Roboflow, with 2,114 images.
+  - Annotated for: Hard_hat, boots, gloves, goggles (in YOLOv11 format).
+  - Images are resized to 640x640, no additional augmentation.
+  - Useful Roboflow links and general guidance on usage.
+
+- **data.yaml:**  
+  The configuration file for YOLO training/validation:
+  ```yaml
+  train: ../train/images
+  val: ../valid/images
+  test: ../test/images
+
+  nc: 6
+  names: ['Gloves', 'Hard_hat', 'Mask', 'Person', 'Safety_boots', 'Vest']
+
+  roboflow:
+    workspace: sdp-lfigk
+    project: ppe-detection-ozhfb
+    version: 14
+    license: CC BY 4.0
+    url: https://universe.roboflow.com/sdp-lfigk/ppe-detection-ozhfb/dataset/14
+  ```
+  - `train`, `val`, `test`: relative paths to image datasets.
+  - `nc`: number of classes (6).
+  - `names`: class labels.
+  - `roboflow`: dataset origin metadata.
+
+### 2. Subdirectories
+- **train/**  
+  Contains training images and their annotation files (usually `.jpg`/`.png` and `.txt` pairs in YOLO format).
+
+- **valid/**  
+  Contains validation images and annotations.
+
+- **test/**  
+  Contains test images and annotations.
+
+### 3. Overall Structure
 ```
-.
-├── data/                   # Training, validation, and test datasets
-├── models/                 # Pretrained or custom-trained YOLOv11 models
-├── utils/                  # Utility scripts for preprocessing, visualization, etc.
-├── detect.py               # Script for running detection on images/videos/streams
-├── train.py                # Script for training or fine-tuning YOLOv11 on custom dataset
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
-└── ...
+dataset/
+│
+├── README.dataset.txt        # Dataset overview, source, license
+├── README.roboflow.txt       # Detailed dataset description from Roboflow
+├── data.yaml                 # Dataset config for YOLO training
+├── train/                    # Training set (images + labels)
+├── valid/                    # Validation set (images + labels)
+└── test/                     # Test set (images + labels)
 ```
 
-Here’s a detailed explanation of each cell from the notebook python_code.ipynb in the PPE-Object-Detection-using-YOLO11 repo:
+### 4. Purpose
+This structure is standard for object detection tasks using YOLO, making it easy to configure and train models. The dataset is well-documented and ready for use in machine learning pipelines.
 
----
 
-Here is a detailed explanation of every cell in code.ipynb:
+
+
+
+
 
 ---
 
