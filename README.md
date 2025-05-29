@@ -122,9 +122,6 @@ results[0].show()
 - Saves the results, sets the image size to 320, and confidence threshold to 0.7.
 - Displays the first frame's detection results.
 
----
-
-If you need further explanation about any specific part or want output interpretation, feel free to ask!
 
 
 ## Output Matrix
