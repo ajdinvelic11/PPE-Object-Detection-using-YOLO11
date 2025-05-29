@@ -36,6 +36,14 @@ Output image:
 - Ensuring mask/gear usage in healthcare facilities.
 - Real-time alerts for missing PPE in hazardous zones.
 
+## Requirements
+
+- Python 3.x
+- Jupyter Notebook
+- Deep learning libraries (e.g., PyTorch or TensorFlow)
+- OpenCV, NumPy, and other standard dependencies
+
+
 The `dataset` folder in the repository is structured for training a YOLOv11 model for PPE (Personal Protective Equipment) detection. Here is an explanation of the dataset's organization and content:
 
 ### 1. Top-level Contents
