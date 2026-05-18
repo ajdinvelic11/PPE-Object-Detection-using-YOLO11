@@ -1,4 +1,4 @@
-path: /app/datasets/ppe-yolo11-github/dataset
+path: /app/datasets/public-dataset/dataset
 
 train: train/images
 val: valid/images
