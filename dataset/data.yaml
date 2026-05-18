@@ -1,13 +1,14 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+path: /app/datasets/ppe-yolo11-github/dataset
+
+train: train/images
+val: valid/images
+test: test/images
 
 nc: 6
-names: ['Gloves', 'Hard_hat', 'Mask', 'Person', 'Safety_boots', 'Vest']
-
-roboflow:
-  workspace: sdp-lfigk
-  project: ppe-detection-ozhfb
-  version: 14
-  license: CC BY 4.0
-  url: https://universe.roboflow.com/sdp-lfigk/ppe-detection-ozhfb/dataset/14
+names:
+  0: Gloves
+  1: Hard_hat
+  2: Mask
+  3: Person
+  4: Safety_boots
+  5: Vest
