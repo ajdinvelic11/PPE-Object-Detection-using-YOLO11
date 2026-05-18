@@ -5,6 +5,7 @@ val: valid/images
 test: test/images
 
 nc: 6
+
 names:
   0: Gloves
   1: Hard_hat
