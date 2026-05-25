@@ -1,0 +1,9 @@
+ultralytics
+torch
+torchvision
+boto3
+pyyaml
+pg8000
+python-dotenv
+pandas
+numpy

@@ -1,0 +1,55 @@
+schema_version: "1.0"
+
+model:
+  model_id: "sustainable-ai-model-v1"
+  model_version: "v1.0"
+  model_name: "PPE Detection YOLO Edge Model"
+  model_type: "YOLO"
+  task_type: "object_detection"
+  description: "YOLO-based PPE detection model for industrial safety image recognition."
+
+repository:
+  git_repo_url: "https://github.com/ajdinvelic11/PPE-Object-Detection-using-YOLO11.git"
+  git_branch: "main"
+  model_config_path: "model.yaml"
+
+runtime:
+  container_image: "yolo-pi-training:latest"
+  runner_type: "edge_yolo_training"
+  device: "cpu"
+
+training_defaults:
+  epochs: 1
+  image_size: 96
+  batch_size: 1
+
+dataset:
+  source_type: "git"
+  dataset_git_url: "https://github.com/ajdinvelic11/PPE-Object-Detection-using-YOLO11.git"
+  dataset_name: "PPE Object Detection Dataset"
+  dataset_task: "object_detection"
+
+artifacts:
+  save_best_model: true
+  save_last_checkpoint: true
+  save_results_csv: true
+  save_training_metadata: true
+
+metrics:
+  primary_metric: "mAP50"
+  additional_metrics:
+    - "precision"
+    - "recall"
+    - "mAP50-95"
+
+deployment:
+  supported_locations:
+    - location_name: "Wien"
+      region_code: "region_1"
+      runtime_type: "raspberry_pi"
+    - location_name: "Wiener Neustadt"
+      region_code: "region_2"
+      runtime_type: "cloud"
+    - location_name: "Eisenstadt"
+      region_code: "region_3"
+      runtime_type: "raspberry_pi"
